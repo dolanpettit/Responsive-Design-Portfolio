@@ -1,0 +1,67 @@
+:root {
+  --text-color: rgb(114, 114, 114);
+  --light-text: white;
+  --light-background: white;
+  --med-background: lightgrey;
+  --dark-background: rgb(87, 86, 86);
+  --highlight-color: rgb(54, 201, 179);
+}
+
+h1,
+h2,
+h3 {
+  font-family: serif;
+  font-weight: 600;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--med-background);
+  color: var(--text-color);
+}
+
+.navbar {
+  padding: 0 3rem;
+  border-bottom: var(--dark-background) 1px solid;
+}
+
+.navbar-brand {
+  background-color: var(--highlight-color);
+  padding: 0.9em 1.9em 0.5em;
+}
+
+.navbar h1 {
+  color: var(--light-text);
+}
+
+.navbar a {
+  color: var(--text-color);
+  white-space: nowrap;
+}
+
+.navbar .nav-link::after {
+  content: "|";
+  color: var(--text-color);
+  padding-left: 1.2em;
+  font-weight: 200;
+}
+
+.navbar .nav-link:last-child::after {
+  content: "";
+  padding-left: 0;
+}
+
+.navbar .active {
+  color: var(--highlight-color);
+  font-weight: 600;
+}
+
+.navbar a:hover {
+  opacity: 0.68;
+}
+
+.main {
+  flex-basis: 1 0 auto;
+}
