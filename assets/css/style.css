@@ -65,3 +65,84 @@ body {
 .main {
   flex-basis: 1 0 auto;
 }
+
+.main-content {
+  background-color: var(--light-background);
+  padding: 1.5rem 2rem;
+  margin-bottom: 2rem;
+}
+
+.content-title {
+  position: relative;
+  padding-bottom: 0.4em;
+  margin-bottom: 0.5em;
+  color: var(--highlight-color);
+}
+
+.content-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: var(--text-color);
+  opacity: 0.3;
+  transform: scale(0.8);
+}
+
+.footer {
+  padding: 1rem 0 0.5rem;
+  border-top: var(--highlight-color) 4px solid;
+  background-color: var(--dark-background);
+  flex-shrink: 0;
+}
+
+.gallery-container h1 {
+  text-align: center;
+  margin-top: 70px;
+  font-family: "Droid Sans", sans-serif;
+  font-weight: bold;
+}
+
+.gallery-container p.page-description {
+  text-align: center;
+  max-width: 800px;
+  margin: 25px auto;
+  color: #888;
+  font-size: 18px;
+}
+
+.tz-gallery {
+  padding: 40px;
+}
+
+.tz-gallery .lightbox img {
+  width: 100%;
+  margin-bottom: 30px;
+  transition: 0.2s ease-in-out;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+}
+
+.tz-gallery .lightbox img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+.tz-gallery img {
+  border-radius: 4px;
+}
+
+.baguetteBox-button {
+  background-color: transparent !important;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 0;
+  }
+
+  .container.gallery-container {
+    border-radius: 0;
+  }
+}
